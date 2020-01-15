@@ -6,11 +6,13 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  new_array = []
   row_index = 0
   while row_index < src.count do
-    puts "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
+    new_array << "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
     row_index += 1
   end
+  new_array
 end
 
 def find_greater_pair(src)
@@ -26,7 +28,7 @@ def find_greater_pair(src)
     end
     row_index += 1
   end
-  puts new_array
+  new_array
 end
 
 def total_even_pairs(src)
@@ -49,6 +51,6 @@ def total_even_pairs(src)
       end 
       row_index += 1
     end
-    puts total
   end 
+  total
 end
